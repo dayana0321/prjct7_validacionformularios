@@ -1,0 +1,97 @@
+body{
+    background-color: #f3dd7e;
+}
+
+.title-form{
+    text-align: center;
+    color: #00463f;
+}
+
+.imagen{
+    margin-left: -20px;
+    object-fit: cover;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 75px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 4px 8px 19px -3px #00463f;
+}
+
+.container-form{
+    margin-top: -2px;
+    margin-left: 20px;
+}
+
+.valid-feedback,
+.invalid-feedback{
+    margin-top: -15px;
+    margin-bottom: 3px;
+}
+
+.formulario__input-error .form-label{
+    color: #bb2929;
+}
+
+.formulario__input-valid .form-label{
+    color: #1ed12d;
+}
+
+
+.formulario__input-error .form-control {
+    border: 1px solid #bb2929;
+}
+
+.formulario__input-valid .form-control {
+    border: 1px solid #1ed12d;
+}
+
+
+/* From uiverse.io by @aasisodiya */
+button {
+    background-color: #eee;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    width: 10em;
+    border-radius: 1rem;
+    color: #00463f;
+    box-shadow: 0 0.4rem #dfd9d9;
+    cursor: pointer;
+   }
+   
+   button:active {
+    color: white;
+    box-shadow: 0 0.2rem #dfd9d9;
+    transform: translateY(0.2rem);
+   }
+   
+   button:hover:not(:disabled) {
+    background: #00463f;
+    color: white;
+    
+   }
+   
+   button:disabled {
+    cursor: auto;
+    color: grey;
+   }
+
+   @media screen and (max-width:750px) {
+    .container-image{
+        object-fit: cover;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    legend{
+        margin-right: 40px;
+    }
+    
+}

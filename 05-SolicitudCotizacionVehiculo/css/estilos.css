@@ -1,0 +1,70 @@
+body{
+    background-color: #ff5148;
+}
+
+.title-form{
+    text-align: center;
+    color: #333905;
+}
+
+.imagen{
+    margin-left: -20px;
+    object-fit: cover;
+}
+.container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin-top: 35px;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 4px 8px 19px -3px #f2bd85;
+}
+
+.container-form{
+    margin-top: -2px;
+    margin-left: 20px;
+}
+
+.valid-feedback,
+.invalid-feedback{
+    margin-top: -15px;
+    margin-bottom: 3px;
+}
+
+/* From uiverse.io by @adamgiebl */
+button {
+    background: #ee8b70;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid #823d40;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em #823d40;
+   }
+   
+   button:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+   }
+   
+   button:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+   @media screen and (max-width:750px) {
+    .container-image{
+        object-fit: cover;
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    legend{
+        margin-right: 40px;
+    }
+    
+}

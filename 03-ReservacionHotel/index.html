@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Reserva tu habitación!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    <div class="container">
+        
+        <div class="container-image">
+            <img src="./habitacion.jpg" alt="Habitación de hotel" width="300px" height="570px" class="imagen">
+        </div>
+
+        <div class="container-form">
+            <h2>¡Reserva tu habitación!</h2>
+            <form class="row needs-validation" id="form" novalidate onload="return validate()">
+              <!--*****************Nombre************************-->
+                <div class="col-md-6" id="grupo__nombre">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Ingresa tu nombre" id="nombre" name="nombre" pattern="[a-zA-Z\s]{1,48}$"  required>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa tu nombre!</div>
+                </div>
+                 <!--*****************Apellido************************-->
+                <div class="col-md-6" id="grupo__apellido">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" placeholder="Ingresa tu apellido" id="apellido" name="apellido" pattern="[a-zA-Z\s]{1,48}$" required>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa tu apellido!</div>
+                </div>
+                 <!--*****************Numero de Personas************************-->
+                <div class="col-md-6" id="grupo__numPersonas">
+                    <label for="numPersonas" class="form-label">Número de Personas</label>
+                    <input type="number" class="form-control" placeholder="Número de personas" id="numPersonas" name="numPersonas" min="1" max="10" required>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa el número de personas!</div>
+                </div>
+                 <!--*****************Fecha de llegada************************-->
+                <div class="col-md-6" id="grupo__fechaLlegada">
+                    <label for="fechaLlegada" class="form-label">Fecha de llegada</label>
+                    <input type="date" class="form-control" placeholder="Fecha de llegada" id="fechaLlegada" name="fechaLlegada" required>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa la fecha de llegada!</div>
+                </div>
+                <!--*****************Fecha de salida************************-->
+                <div class="col-md-6" id="grupo__fechaSalida">
+                    <label for="fechaSalida" class="form-label">Fecha de salida</label>
+                    <input type="date" class="form-control" placeholder="Fecha de salida" id="fechaSalida" name="fechaSalida" required>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa la fecha de salida!</div>
+                </div>
+                <!--*****************Notas************************-->
+                 <div class="col-md-6" id="grupo__notas">
+                    <label for="notas" class="form-label">Notas especiales</label>
+                    <textarea class="form-control" rows="2" cols="2" id="notas" name="notas"></textarea>
+                    <p class="formulario__input-error"></p>
+                    <p class="formulario__input-valid"></p>
+                    <div class="valid-feedback">Campo completo</div>
+                    <div class="invalid-feedback">¡Ingresa tus notas!</div>
+                </div>
+
+                <!--*****************Tipos de Habitación************************-->
+                <fieldset class="row mt-3 mb-3">
+                    <legend class="col-form-label col-sm-2 pt-0">Tipo de Habitación</legend>
+                    <div class="col-sm-10" id="tipoHa">
+                      <!--*****************Estándar************************-->
+                      <div class="form-check" id="grupo__check1">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked required>
+                        <label class="form-check-label" for="gridRadios1">
+                          Estándar
+                        </label>
+                        <div class="valid-feedback">Campo completo</div>
+                        <div class="invalid-feedback">¡Selecciona algo!</div>
+                      </div>
+                      <!--*****************De lujo************************-->
+                      <div class="form-check" id="grupo__check2">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" required>
+                        <label class="form-check-label" for="gridRadios2">
+                          De lujo
+                        </label>
+                        <div class="valid-feedback">Campo completo</div>
+                        <div class="invalid-feedback">¡Selecciona algo!</div>
+                      </div>
+                      <!--*****************Suite************************-->
+                      <div class="form-check" id="grupo__check3">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" required>
+                        <label class="form-check-label" for="gridRadios3">
+                          Suite
+                        </label>
+                        <div class="valid-feedback">Campo completo</div>
+                        <div class="invalid-feedback">¡Selecciona algo!</div>
+                      </div>
+                    </div>
+                  </fieldset>
+                  <div class="col-sm-3">
+                    <button type="submit">Reservar</button>
+                  </div>
+              </form>
+        </div>
+    </div>
+
+    <script src="./validacion1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
